@@ -4,120 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Name | Portfolio</title>
-  <meta
-    name="description"
-    content="Professional web designer and developer portfolio showcasing selected website projects."
-  >
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Portfolio website showcasing selected web projects.">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrapper">
-      <a class="brand" href="#top">Your Name</a>
-      <nav aria-label="Main navigation">
-        <ul class="nav-links">
-          <li><a href="#work">Work</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="#top">Your Name</a>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="container hero-content">
-        <p class="eyebrow">Web Designer & Developer</p>
-        <h1>Building clean, modern websites that help brands stand out.</h1>
-        <p class="hero-text">
-          I design and develop polished, user-focused websites with strong visual hierarchy,
-          responsive behavior, and performance in mind.
-        </p>
-        <a class="button" href="#work">View My Work</a>
-      </div>
+    <section>
+      <h1>Clean, modern websites built for real businesses.</h1>
+      <p>
+        I design and build professional websites that are clear, fast, and easy to use.
+      </p>
+      <p><a href="#projects">View my work</a></p>
     </section>
 
-    <section id="work" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Portfolio</p>
-          <h2>Featured Website Projects</h2>
-        </div>
+    <section id="projects">
+      <h2>Projects</h2>
 
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-image-placeholder" aria-hidden="true">Project One</div>
-            <div class="project-body">
-              <h3>Luxury Real Estate Platform</h3>
-              <p>
-                A high-end property showcase with advanced filtering, virtual tour integration,
-                and a fully responsive listing experience.
-              </p>
-              <a href="#" class="project-link">View Project</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image-placeholder" aria-hidden="true">Project Two</div>
-            <div class="project-body">
-              <h3>Creative Agency Website</h3>
-              <p>
-                A modern agency site focused on storytelling and conversion, featuring custom
-                animations and clear service-focused content blocks.
-              </p>
-              <a href="#" class="project-link">View Project</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image-placeholder" aria-hidden="true">Project Three</div>
-            <div class="project-body">
-              <h3>E-commerce Brand Storefront</h3>
-              <p>
-                A sleek product storefront with optimized mobile checkout flow, performance-first
-                implementation, and scalable CMS-driven updates.
-              </p>
-              <a href="#" class="project-link">View Project</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section section-alt">
-      <div class="container about-grid">
-        <div>
-          <p class="eyebrow">About</p>
-          <h2>Professional digital experiences with attention to detail.</h2>
-        </div>
-        <p class="about-text">
-          I work with businesses and entrepreneurs to create websites that are visually refined,
-          easy to navigate, and aligned with business goals. From concept to launch, I focus on
-          clear communication, quality execution, and long-term maintainability.
-        </p>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container contact-card">
-        <p class="eyebrow">Contact</p>
-        <h2>Let’s build your next website.</h2>
+      <article>
+        <h3>Luxury Real Estate Platform</h3>
         <p>
-          Have a project in mind? Reach out and let’s discuss how I can help bring your idea to life.
+          A responsive real estate site with advanced listing filters and strong visual presentation.
         </p>
-        <a class="button button-secondary" href="mailto:hello@example.com">hello@example.com</a>
-      </div>
+        <p><a href="#">View project</a></p>
+      </article>
+
+      <article>
+        <h3>Creative Agency Website</h3>
+        <p>
+          A modern agency site focused on clear messaging, service highlights, and lead generation.
+        </p>
+        <p><a href="#">View project</a></p>
+      </article>
+
+      <article>
+        <h3>E-commerce Brand Storefront</h3>
+        <p>
+          A product-focused storefront designed for smooth browsing and a simple checkout experience.
+        </p>
+        <p><a href="#">View project</a></p>
+      </article>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I help businesses create websites that look professional and support real goals. My work
+        focuses on usability, performance, and clean implementation.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you have a project in mind, I would love to hear from you.</p>
+      <p><a href="mailto:hello@example.com">hello@example.com</a></p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
-    </div>
+  <footer>
+    <p>&copy; 2026 Your Name. All rights reserved.</p>
   </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
