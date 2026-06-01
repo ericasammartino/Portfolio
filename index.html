@@ -3,75 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Portfolio</title>
-  <meta name="description" content="Portfolio website showcasing selected web projects.">
+  <title>Erica Sammartino Studios | Web Developer</title>
+  <meta
+    name="description"
+    content="Portfolio site for Erica Sammartino Studios showcasing selected web development work."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="#top">Your Name</a>
-      <ul>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="page-frame" id="top">
+    <header class="hero">
+      <nav class="hero-nav" aria-label="Main navigation">
+        <p class="studio-name">Erica Sammartino Studios</p>
+        <button class="menu-button" type="button" aria-label="Open menu">
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
 
-  <main id="top">
-    <section>
-      <h1>Clean, modern websites built for real businesses.</h1>
-      <p>
-        I design and build professional websites that are clear, fast, and easy to use.
-      </p>
-      <p><a href="#projects">View my work</a></p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <article>
-        <h3>Luxury Real Estate Platform</h3>
+      <div class="hero-content">
+        <h1>Web Developer</h1>
         <p>
-          A responsive real estate site with advanced listing filters and strong visual presentation.
+          I craft creative, thoughtful web experiences that bring each client's vision to life.
+          From concept to launch, I focus on design that feels unique, purposeful, and aligned
+          with your goals.
         </p>
-        <p><a href="#">View project</a></p>
-      </article>
+      </div>
+    </header>
 
-      <article>
-        <h3>Creative Agency Website</h3>
-        <p>
-          A modern agency site focused on clear messaging, service highlights, and lead generation.
-        </p>
-        <p><a href="#">View project</a></p>
-      </article>
+    <main>
+      <section id="selected-work" class="work-section">
+        <div class="section-heading">
+          <h2>Selected Work</h2>
+          <p>A curated selection of recent builds</p>
+        </div>
 
-      <article>
-        <h3>E-commerce Brand Storefront</h3>
-        <p>
-          A product-focused storefront designed for smooth browsing and a simple checkout experience.
-        </p>
-        <p><a href="#">View project</a></p>
-      </article>
-    </section>
+        <div class="work-grid" aria-label="Project placeholders">
+          <article class="work-card" aria-label="Project placeholder 1"></article>
+          <article class="work-card" aria-label="Project placeholder 2"></article>
+          <article class="work-card" aria-label="Project placeholder 3"></article>
+          <article class="work-card" aria-label="Project placeholder 4"></article>
+          <article class="work-card" aria-label="Project placeholder 5"></article>
+          <article class="work-card" aria-label="Project placeholder 6"></article>
+        </div>
+      </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I help businesses create websites that look professional and support real goals. My work
-        focuses on usability, performance, and clean implementation.
-      </p>
-    </section>
+      <section id="contact" class="contact-section">
+        <div class="contact-panel">
+          <h2>Get in Touch</h2>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>If you have a project in mind, I would love to hear from you.</p>
-      <p><a href="mailto:hello@example.com">hello@example.com</a></p>
-    </section>
-  </main>
+          <form class="contact-form" action="#" method="post">
+            <label for="name">name</label>
+            <input id="name" name="name" type="text" autocomplete="name">
 
-  <footer>
-    <p>&copy; 2026 Your Name. All rights reserved.</p>
-  </footer>
+            <label for="email">email address</label>
+            <input id="email" name="email" type="email" autocomplete="email">
+
+            <label for="message">message</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
