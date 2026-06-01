@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erica Sammartino Studios | Web Developer</title>
+  <meta
+    name="description"
+    content="Portfolio site for Erica Sammartino Studios showcasing selected web development work."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-frame" id="top">
+    <header class="hero">
+      <nav class="hero-nav" aria-label="Main navigation">
+        <p class="studio-name">Erica Sammartino Studios</p>
+        <button class="menu-button" type="button" aria-label="Open menu">
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+
+      <div class="hero-content">
+        <h1>Web Developer</h1>
+        <p>
+          I craft creative, thoughtful web experiences that bring each client's vision to life.
+          From concept to launch, I focus on design that feels unique, purposeful, and aligned
+          with your goals.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section id="selected-work" class="work-section">
+        <div class="section-heading">
+          <h2>Selected Work</h2>
+          <p>A curated selection of recent builds</p>
+        </div>
+
+        <div class="work-grid" aria-label="Project placeholders">
+          <article class="work-card" aria-label="Project placeholder 1"></article>
+          <article class="work-card" aria-label="Project placeholder 2"></article>
+          <article class="work-card" aria-label="Project placeholder 3"></article>
+          <article class="work-card" aria-label="Project placeholder 4"></article>
+          <article class="work-card" aria-label="Project placeholder 5"></article>
+          <article class="work-card" aria-label="Project placeholder 6"></article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="contact-panel">
+          <h2>Get in Touch</h2>
+
+          <form class="contact-form" action="#" method="post">
+            <label for="name">name</label>
+            <input id="name" name="name" type="text" autocomplete="name">
+
+            <label for="email">email address</label>
+            <input id="email" name="email" type="email" autocomplete="email">
+
+            <label for="message">message</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
