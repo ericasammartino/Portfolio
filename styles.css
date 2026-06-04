@@ -1,0 +1,109 @@
+:root {
+  --ink: #111111;
+  --slate: #5e6472;
+  --border: #d9dde3;
+  --paper: #faf7f3;
+  --white: #ffffff;
+  --matisse: #1f4e8c;
+  --matisse-hover: #183f72;
+  --rust: #631c03;
+  --rust-deep: #902904;
+  --gold: #c89a3a;
+  --overlay: rgba(8, 10, 16, 0.6);
+  --font-heading: "Gloock";
+  --font-body: "Plus Jakarta Sans";
+  --space-xs: 0.5rem;
+  /* 8px */
+  --space-sm: 1rem;
+  /* 16px */
+  --space-md: 1.5rem;
+  /* 24px */
+  --space-lg: 2rem;
+  /* 32px */
+  --space-xl: 3rem;
+  /* 48px */
+  --space-2xl: 4rem;
+  /* 64px */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("Mood Board/daniil-silantev-9R6NwFop9fs-unsplash.jpg");
+  background-size: cover;
+  color: var(--paper);
+  font-size: 16px;
+  margin: 0;
+  padding: 0 clamp(1.5rem, 8vw, 10rem);
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: 0.5rem;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  line-height: 3rem;
+  letter-spacing: 0.15rem;
+}
+
+.body-large {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+/* -------- NAV -------- */
+
+nav ul {
+  display: none;
+}
+
+/* -------- MAIN -------- */
+
+/* -------- HERO -------- */
+
+#hero {
+  margin-top: 12rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.hero-title p,
+.hero-title h1 {
+  margin: 0;
+}
+
+.hero-blurb {
+  max-width: 424px;
+  margin-top: 5rem;
+  margin-left: auto;
+}
+
+/* -------- PROJECTS -------- */
+
+/* -------- CONTACT -------- */
+
+/* -------- MEDIA QUERIES -------- */
+
+@media (max-width: 768px) {
+  .hero-blurb {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+}
