@@ -97,13 +97,60 @@ nav ul {
 
 /* -------- PROJECTS -------- */
 
+.project-section {
+  min-height: 100vh;
+  padding: var(--space-xl) 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-title {
+  margin-bottom: var(--space-md);
+}
+
+.projects-title h2,
+.projects-title p {
+  margin: 0;
+}
+
+.projects-title .body-large {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.work-grid {
+  width: min(100%, 920px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-xs);
+}
+
+.work-card {
+  aspect-ratio: 1 / 1.15;
+  background-color: var(--white);
+}
+
 /* -------- CONTACT -------- */
 
 /* -------- MEDIA QUERIES -------- */
+
+@media (max-width: 900px) {
+  .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
 @media (max-width: 768px) {
   .hero-blurb {
     margin-left: 0;
     margin-top: 2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .work-grid {
+    grid-template-columns: 1fr;
   }
 }
