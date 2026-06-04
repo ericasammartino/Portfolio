@@ -162,7 +162,7 @@ nav ul {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: 0;
   font-family: var(--font-body);
 }
 
@@ -170,6 +170,7 @@ nav ul {
   font-family: var(--font-body);
   font-size: 0.875rem;
   line-height: 1;
+  margin-bottom: 0.25rem;
 }
 
 .contact-form input,
@@ -181,11 +182,14 @@ nav ul {
   border: 0;
   border-bottom: 1px solid rgba(250, 247, 243, 0.75);
   border-radius: 0;
-  padding: 0 0 var(--space-xs);
+  line-height: 1.1;
+  margin-bottom: var(--space-sm);
+  padding: 0 0 0.25rem;
 }
 
 .contact-form textarea {
-  min-height: 2rem;
+  min-height: 1.25rem;
+  margin-bottom: 0;
   resize: vertical;
 }
 
