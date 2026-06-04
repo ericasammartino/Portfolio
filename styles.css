@@ -92,6 +92,7 @@ nav {
   position: absolute;
   top: calc(100% + var(--space-sm));
   right: 0;
+  z-index: 20;
   list-style: none;
   background-color: rgba(0, 0, 0, 0.82);
   border: 1px solid rgba(250, 247, 243, 0.18);
@@ -106,7 +107,8 @@ nav {
   visibility: hidden;
 }
 
-.nav-menu.is-open {
+.nav-menu.is-open,
+.menu-is-open .nav-menu {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
