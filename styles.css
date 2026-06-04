@@ -24,6 +24,7 @@
   /* 48px */
   --space-2xl: 4rem;
   /* 64px */
+  --border-radius: 0.5rem;
 }
 
 *,
@@ -52,18 +53,19 @@ h1 {
 h2 {
   font-family: var(--font-heading);
   font-size: 2.75rem;
-  line-height: 3rem;
-  letter-spacing: 0.15rem;
+  line-height: 0rem;
+}
+
+.body-base {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .body-large {
   font-family: var(--font-body);
   font-size: 1.25rem;
   line-height: 2rem;
-}
-
-.body-base {
-  font-size: 0.625rem;
 }
 
 /* -------- NAV -------- */
@@ -101,7 +103,7 @@ nav ul {
 
 /* -------- HERO -------- */
 
-#hero {
+.hero-section {
   margin-top: 12rem;
   height: 100vh;
   display: flex;
@@ -156,12 +158,13 @@ nav ul {
   width: min(100%, 920px);
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-xs);
+  gap: var(--space-sm);
 }
 
 .work-card {
   aspect-ratio: 1 / 1.15;
   background-color: var(--white);
+  border-radius: var(--border-radius);
 }
 
 /* -------- CONTACT -------- */
@@ -222,7 +225,6 @@ nav ul {
 .contact-form textarea {
   height: 1rem;
   min-height: 1rem;
-  margin-bottom: 0;
   overflow: hidden;
   resize: none;
 }
@@ -256,11 +258,30 @@ nav ul {
   outline-offset: 3px;
 }
 
+/* -------- FOOTER -------- */
+
+footer {
+  text-align: center;
+}
+
 /* -------- MEDIA QUERIES -------- */
 
 @media (max-width: 900px) {
+  .hero-section {
+    height: 50vh;
+  }
+
   .work-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-section {
+    min-height: auto;
+    padding: 128px 0;
+  }
+
+  .contact-panel h2 {
+    font-size: 1.75rem;
   }
 }
 
@@ -307,6 +328,10 @@ nav ul {
   .body-large {
     font-size: 0.875rem;
     line-height: 1.5rem;
+  }
+
+  .body-base {
+    font-size: 0.625rem;
   }
 
   #hero {
