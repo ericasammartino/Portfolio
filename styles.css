@@ -134,6 +134,90 @@ nav ul {
 
 /* -------- CONTACT -------- */
 
+.contact-section {
+  min-height: 100vh;
+  padding: var(--space-2xl) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-panel {
+  width: min(100%, 860px);
+  min-height: 460px;
+  padding: clamp(var(--space-xl), 7vw, 6rem);
+  border: 3px solid var(--matisse);
+  border-radius: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.68);
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, 320px);
+  align-items: center;
+  gap: var(--space-2xl);
+}
+
+.contact-panel h2 {
+  margin: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  font-family: var(--font-body);
+}
+
+.contact-form label {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  color: var(--paper);
+  font: inherit;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(250, 247, 243, 0.75);
+  border-radius: 0;
+  padding: 0 0 var(--space-xs);
+}
+
+.contact-form textarea {
+  min-height: 2rem;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 0;
+  border-bottom-color: var(--white);
+}
+
+.contact-form button {
+  margin-top: var(--space-lg);
+  padding: 0.875rem var(--space-lg);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1;
+  background-color: var(--matisse);
+  border: 0;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+  background-color: var(--matisse-hover);
+}
+
+.contact-form button:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 3px;
+}
+
 /* -------- MEDIA QUERIES -------- */
 
 @media (max-width: 900px) {
@@ -147,10 +231,25 @@ nav ul {
     margin-left: 0;
     margin-top: 2rem;
   }
+
+  .contact-panel {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
 }
 
 @media (max-width: 560px) {
   .work-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    padding: var(--space-xl) 0;
+  }
+
+  .contact-panel {
+    padding: var(--space-lg);
+    border-radius: 1rem;
   }
 }
