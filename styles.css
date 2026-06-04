@@ -33,6 +33,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("Mood Board/daniil-silantev-9R6NwFop9fs-unsplash.jpg");
   background-position: center top;
@@ -77,8 +81,54 @@ header {
   z-index: 10;
 }
 
-nav ul {
-  display: none;
+nav {
+  position: relative;
+}
+
+.nav-menu {
+  min-width: 10rem;
+  margin: 0;
+  padding: var(--space-sm);
+  position: absolute;
+  top: calc(100% + var(--space-sm));
+  right: 0;
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.82);
+  border: 1px solid rgba(250, 247, 243, 0.18);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.75rem);
+  transition: opacity 200ms ease, transform 200ms ease, visibility 200ms ease;
+  visibility: hidden;
+}
+
+.nav-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.nav-menu a {
+  color: var(--paper);
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus-visible {
+  color: var(--white);
+  outline: 0;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
 }
 
 .menu-button {
@@ -90,6 +140,8 @@ nav ul {
   flex-direction: column;
   gap: 0.5rem;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
 .menu-button span {
@@ -97,6 +149,21 @@ nav ul {
   width: 100%;
   height: 2px;
   background-color: var(--paper);
+  transform-origin: center;
+  transition: transform 200ms ease;
+}
+
+.menu-button[aria-expanded="true"] span:first-child {
+  transform: translateY(0.3125rem) rotate(45deg);
+}
+
+.menu-button[aria-expanded="true"] span:last-child {
+  transform: translateY(-0.3125rem) rotate(-45deg);
+}
+
+.menu-button:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 0.5rem;
 }
 
 /* -------- MAIN -------- */
@@ -114,6 +181,7 @@ nav ul {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  animation: fade-slide-up 700ms ease both;
 }
 
 .hero-title p,
@@ -125,6 +193,7 @@ nav ul {
   max-width: 424px;
   margin-top: 5rem;
   margin-left: auto;
+  animation: fade-slide-up 700ms ease 180ms both;
 }
 
 /* -------- PROJECTS -------- */
@@ -165,6 +234,37 @@ nav ul {
   aspect-ratio: 1 / 1.15;
   background-color: var(--white);
   border-radius: var(--border-radius);
+}
+
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.work-grid .work-card:nth-child(2) {
+  transition-delay: 80ms;
+}
+
+.work-grid .work-card:nth-child(3) {
+  transition-delay: 160ms;
+}
+
+.work-grid .work-card:nth-child(4) {
+  transition-delay: 240ms;
+}
+
+.work-grid .work-card:nth-child(5) {
+  transition-delay: 320ms;
+}
+
+.work-grid .work-card:nth-child(6) {
+  transition-delay: 400ms;
 }
 
 /* -------- CONTACT -------- */
@@ -262,6 +362,38 @@ nav ul {
 
 footer {
   text-align: center;
+}
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* -------- MEDIA QUERIES -------- */

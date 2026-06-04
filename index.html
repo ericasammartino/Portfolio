@@ -12,19 +12,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 
 <body>
   <header>
     <nav aria-label="Main navigation">
-      <ul>
+      <ul id="primary-navigation" class="nav-menu" aria-hidden="true">
         <li><a href="#hero">Home</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="menu-button" type="button" aria-label="Open menu">
-        <span></span>
-        <span></span>
+      <button class="menu-button" type="button" aria-label="Open menu" aria-controls="primary-navigation"
+        aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </button>
     </nav>
   </header>
@@ -41,22 +43,22 @@
     </section>
 
     <section id="projects" class="project-section">
-      <div class="projects-title">
+      <div class="projects-title" data-reveal>
         <h2>Selected Works</h2>
         <p class="body-large">A curated selection of recent builds</p>
       </div>
       <div class="work-grid" aria-label="Project placeholders">
-        <article class="work-card" aria-label="Project placeholder 1"></article>
-        <article class="work-card" aria-label="Project placeholder 2"></article>
-        <article class="work-card" aria-label="Project placeholder 3"></article>
-        <article class="work-card" aria-label="Project placeholder 4"></article>
-        <article class="work-card" aria-label="Project placeholder 5"></article>
-        <article class="work-card" aria-label="Project placeholder 6"></article>
+        <article class="work-card" aria-label="Project placeholder 1" data-reveal></article>
+        <article class="work-card" aria-label="Project placeholder 2" data-reveal></article>
+        <article class="work-card" aria-label="Project placeholder 3" data-reveal></article>
+        <article class="work-card" aria-label="Project placeholder 4" data-reveal></article>
+        <article class="work-card" aria-label="Project placeholder 5" data-reveal></article>
+        <article class="work-card" aria-label="Project placeholder 6" data-reveal></article>
       </div>
     </section>
 
     <section id="contact" class="contact-section">
-      <div class="contact-panel">
+      <div class="contact-panel" data-reveal>
         <h2>Get in Touch</h2>
 
         <form class="contact-form" action="#" method="post">
