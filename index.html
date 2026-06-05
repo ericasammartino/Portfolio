@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erica Sammartino Designs | Web Developer</title>
+  <meta name="description"
+    content="Portfolio site for Erica Sammartino Designs showcasing selected web development work.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="apps.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <ul id="primary-navigation" class="nav-menu" aria-hidden="true">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="menu-button" type="button" aria-label="Open menu" aria-controls="primary-navigation"
+        aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section id="hero" class="hero-section">
+      <div class="hero-title">
+        <p class="body-large">Erica Sammartino Designs</p>
+        <h1>Web Developer</h1>
+      </div>
+      <p class="body-large hero-blurb">I craft creative, thoughtful web experiences that bring each client's vision to
+        life.
+        From concept to launch, I focus on design that feels unique, purposeful, and aligned with your goals.</p>
+    </section>
+
+    <section id="projects" class="project-section">
+      <div class="projects-title" data-reveal>
+        <h2>Selected Works</h2>
+        <p class="body-large">A curated selection of recent builds</p>
+      </div>
+      <div class="work-grid" aria-label="Project placeholders">
+        <article class="work-card" aria-label="Project placeholder 1" data-reveal></article>
+        <article class="work-card" aria-label="Project placeholder 2" data-reveal></article>
+        <article class="work-card" aria-label="Project placeholder 3" data-reveal></article>
+        <article class="work-card" aria-label="Project placeholder 4" data-reveal></article>
+        <article class="work-card" aria-label="Project placeholder 5" data-reveal></article>
+        <article class="work-card" aria-label="Project placeholder 6" data-reveal></article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="contact-panel" data-reveal>
+        <h2>Get in Touch</h2>
+
+        <form class="contact-form" action="https://formspree.io/f/mnjynpkn" method="post">
+          <label for="name">name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+
+          <label for="email">email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+
+          <label for="message">message</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Erica Sammartino Designs. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
