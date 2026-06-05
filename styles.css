@@ -116,32 +116,25 @@ nav {
 }
 
 .nav-menu a {
+  background-image: linear-gradient(90deg, var(--paper), var(--gold), var(--white));
+  background-position: 100% 0;
+  background-size: 220% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
   color: var(--paper);
   display: block;
   font-family: var(--font-body);
   font-size: 0.875rem;
-  isolation: isolate;
   line-height: 1;
-  overflow: hidden;
   padding: 0.25rem 0.5rem;
   position: relative;
-  border-radius: calc(var(--border-radius) / 2);
   text-decoration: none;
-  transition: color 180ms ease, transform 180ms ease;
+  transition: background-position 240ms ease, color 180ms ease, transform 180ms ease;
 }
 
-.nav-menu a::before,
 .nav-menu a::after {
   content: "";
   position: absolute;
-}
-
-.nav-menu a::before {
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(90deg, transparent, rgba(31, 78, 140, 0.45), rgba(200, 154, 58, 0.3), transparent);
-  transform: translateX(-105%);
-  transition: transform 260ms ease;
 }
 
 .nav-menu a::after {
@@ -157,14 +150,11 @@ nav {
 
 .nav-menu a:hover,
 .nav-menu a:focus-visible {
-  color: var(--white);
+  background-position: 0 0;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
   outline: 0;
   transform: translateX(0.25rem);
-}
-
-.nav-menu a:hover::before,
-.nav-menu a:focus-visible::before {
-  transform: translateX(0);
 }
 
 .nav-menu a:hover::after,
