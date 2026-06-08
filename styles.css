@@ -378,36 +378,65 @@ nav {
 }
 
 .contact-form button {
+  --button-border-width: 1px;
   margin-top: var(--space-lg);
   padding: 0.875rem var(--space-lg);
   color: var(--paper);
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1;
-  background:
-    linear-gradient(var(--matisse), var(--matisse)) padding-box,
-    conic-gradient(from 180deg, var(--matisse), var(--gold), var(--white), var(--gold), var(--matisse)) border-box;
-  background-position: center;
-  background-size: 100% 100%;
-  border: 1px solid transparent;
+  background: transparent;
+  border: 0;
   border-radius: 0.375rem;
   cursor: pointer;
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
   transition: box-shadow 260ms ease, transform 260ms ease;
+}
+
+.contact-form button::before,
+.contact-form button::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.contact-form button::before {
+  inset: -100%;
+  z-index: -2;
+  background: conic-gradient(var(--matisse), var(--gold), var(--white), var(--gold), var(--matisse));
+  animation: contact-button-border-spin 1.6s linear infinite;
+  animation-play-state: paused;
+}
+
+.contact-form button::after {
+  inset: var(--button-border-width);
+  z-index: -1;
+  background: var(--matisse);
+  border-radius: calc(0.375rem - var(--button-border-width));
+  transition: background 260ms ease;
 }
 
 .contact-form button:hover,
 .contact-form button:focus {
-  background:
-    linear-gradient(var(--matisse-hover), var(--matisse-hover)) padding-box,
-    conic-gradient(from 180deg, var(--matisse), var(--gold), var(--white), var(--gold), var(--matisse)) border-box;
   box-shadow: 0 0 18px rgba(31, 78, 140, 0.35);
   transform: translateY(-1px);
 }
 
+.contact-form button:hover::before,
+.contact-form button:focus::before,
+.contact-form button:active::before {
+  animation-play-state: running;
+}
+
+.contact-form button:hover::after,
+.contact-form button:focus::after,
+.contact-form button:active::after {
+  background: var(--matisse-hover);
+}
+
 .contact-form button:active {
-  background:
-    linear-gradient(var(--matisse-hover), var(--matisse-hover)) padding-box,
-    conic-gradient(from 180deg, var(--matisse), var(--gold), var(--white), var(--gold), var(--matisse)) border-box;
   box-shadow: 0 0 12px rgba(31, 78, 140, 0.3);
   transform: translateY(0);
 }
@@ -421,6 +450,12 @@ nav {
 
 footer {
   text-align: center;
+}
+
+@keyframes contact-button-border-spin {
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 @keyframes fade-slide-up {
