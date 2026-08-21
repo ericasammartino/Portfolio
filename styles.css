@@ -372,6 +372,7 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex: 0 0 auto;
     width: 24px;
     height: 24px;
     border: 2px solid currentColor;
@@ -381,8 +382,14 @@ a {
     line-height: 1;
 }
 
+.process-card-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
 .process-card h3 {
-    margin: 10px 0 0;
+    margin: 2px 0 0;
     color: var(--color-ink);
     font-size: 17px;
     font-weight: 700;
