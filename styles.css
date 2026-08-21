@@ -456,10 +456,12 @@ a {
 
 .package-card-coral {
     color: #f47f7b;
+    border-color: rgba(244, 127, 123, 0.5);
 }
 
 .package-card-blue {
     color: #58aee8;
+    border-color: rgba(88, 174, 232, 0.5);
 }
 
 .package-badge {
