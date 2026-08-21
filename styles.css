@@ -489,6 +489,9 @@ a {
     flex: 0 0 auto;
     width: 24px;
     height: 24px;
+    background-color: currentColor;
+    mask: var(--icon-url) center / contain no-repeat;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
 }
 
 .package-title-row h3 {
