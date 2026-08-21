@@ -180,6 +180,219 @@ a {
   border-radius: 28px;
 }
 
+.section-shell {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.attention-section {
+  padding: 18px 0 96px;
+}
+
+.attention-copy {
+  width: min(100%, 740px);
+}
+
+.attention-copy h2,
+.support-intro h2,
+.process-section h2 {
+  margin: 0;
+  color: var(--color-ink);
+  font-size: clamp(32px, 4.2vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.03;
+}
+
+.attention-copy h2 {
+  max-width: 680px;
+}
+
+.attention-copy h2 em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+}
+
+.attention-copy p,
+.support-intro p {
+  color: var(--color-ink);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.attention-copy p {
+  width: min(100%, 720px);
+  margin: 24px 0 0 100px;
+}
+
+.attention-copy p + p {
+  margin-top: 4px;
+}
+
+.support-section {
+  padding: 0 0 108px;
+}
+
+.support-intro {
+  width: min(100%, 740px);
+}
+
+.support-intro h2 {
+  max-width: 670px;
+}
+
+.support-intro p {
+  width: min(100%, 690px);
+  margin: 28px 0 0 100px;
+}
+
+.support-intro p + p {
+  margin-top: 4px;
+}
+
+.service-list {
+  display: grid;
+  gap: 36px;
+  width: min(100%, 650px);
+  margin: 52px auto 0;
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  align-items: start;
+  gap: 28px;
+}
+
+.service-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-top: 3px;
+}
+
+.service-icon-mint {
+  color: #67d7c5;
+}
+
+.service-icon-lavender {
+  color: #b7b0f0;
+}
+
+.service-icon-coral {
+  color: #ff7d74;
+}
+
+.service-icon-gold {
+  color: #f7c94b;
+}
+
+.service-icon-blue {
+  color: #54b7e8;
+}
+
+.service-icon-navy {
+  color: #56638f;
+}
+
+.service-item h3 {
+  margin: 0;
+  color: var(--color-ink);
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.service-item p {
+  margin: 8px 0 0;
+  color: var(--color-muted);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.process-section {
+  padding: 0 0 92px;
+}
+
+.process-section h2 {
+  max-width: 650px;
+}
+
+.process-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+  width: min(100%, 720px);
+  margin: 38px auto 0;
+}
+
+.process-card {
+  min-height: 158px;
+  border-radius: 24px;
+  padding: 24px 24px 22px;
+}
+
+.process-card-yellow {
+  background: #ffe589;
+}
+
+.process-card-lavender {
+  background: #c7c3ef;
+}
+
+.process-card-mint {
+  background: #82decd;
+}
+
+.process-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.process-card h3 {
+  margin: 10px 0 0;
+  color: var(--color-ink);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+.process-card p {
+  margin: 12px 0 0;
+  color: var(--color-ink);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.process-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 58px;
+}
+
+.button-small {
+  min-width: 225px;
+  min-height: 42px;
+  padding: 11px 24px;
+  font-size: 12px;
+}
+
 @media (max-width: 760px) {
   .site-header {
     padding-top: 18px;
@@ -229,5 +442,56 @@ a {
 
   .hero-art {
     margin-top: 46px;
+  }
+
+  .section-shell {
+    padding: 0 22px;
+  }
+
+  .attention-section {
+    padding: 8px 0 68px;
+  }
+
+  .attention-copy p,
+  .support-intro p {
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .support-section {
+    padding-bottom: 74px;
+  }
+
+  .service-list {
+    gap: 28px;
+    margin-top: 42px;
+  }
+
+  .service-item {
+    grid-template-columns: 32px 1fr;
+    gap: 18px;
+  }
+
+  .service-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .service-item h3 {
+    font-size: 20px;
+  }
+
+  .process-section {
+    padding-bottom: 64px;
+  }
+
+  .process-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: min(100%, 360px);
+  }
+
+  .process-action {
+    margin-top: 34px;
   }
 }
