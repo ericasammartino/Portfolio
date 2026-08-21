@@ -56,6 +56,7 @@ a {
   display: block;
   width: 22px;
   height: 22px;
+  object-fit: contain;
 }
 
 .hero-section {
