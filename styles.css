@@ -291,6 +291,9 @@ a {
   width: 30px;
   height: 30px;
   margin-top: 3px;
+  background-color: currentColor;
+  mask: var(--icon-url) center / contain no-repeat;
+  -webkit-mask: var(--icon-url) center / contain no-repeat;
 }
 
 .service-icon-mint {
