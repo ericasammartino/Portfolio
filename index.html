@@ -404,6 +404,143 @@
           </div>
         </div>
       </section>
+
+      <section
+        class="contact-section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="section-shell">
+          <div class="contact-card">
+            <div class="contact-header">
+              <span class="contact-icon" aria-hidden="true"></span>
+              <div>
+                <h2 id="contact-title">What can we help you with?</h2>
+                <p>
+                  You don&rsquo;t need to know exactly what service you need.
+                  Tell us what&rsquo;s been sitting on your to-do list,
+                  what&rsquo;s not working, or what you&rsquo;re trying to
+                  accomplish.
+                </p>
+                <p>We&rsquo;ll take a look and let you know if we can help.</p>
+              </div>
+            </div>
+
+            <form
+              class="contact-form"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New website help request"
+              />
+
+              <input
+                class="form-honeypot"
+                type="text"
+                name="_gotcha"
+                tabindex="-1"
+                autocomplete="off"
+              />
+
+              <div class="form-fields">
+                <div class="field-group">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" autocomplete="name" required />
+                </div>
+
+                <div class="field-group">
+                  <label for="business-name">Business name</label>
+                  <input
+                    id="business-name"
+                    name="business_name"
+                    type="text"
+                    autocomplete="organization"
+                  />
+                </div>
+
+                <div class="field-group">
+                  <label for="email">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+
+                <div class="field-group">
+                  <label for="website">Website, if you have one</label>
+                  <input
+                    id="website"
+                    name="website"
+                    type="url"
+                    inputmode="url"
+                    autocomplete="url"
+                  />
+                </div>
+              </div>
+
+              <div class="form-details">
+                <div class="field-group">
+                  <label for="message">What do you need help with?</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="8"
+                    placeholder="Don&rsquo;t worry about making this sound professional. Tell me what you&rsquo;re trying to do, what&rsquo;s not working, or what you&rsquo;ve been putting off."
+                    required
+                  ></textarea>
+                </div>
+
+                <fieldset class="timeline-field">
+                  <legend>What&rsquo;s your ideal timeline?</legend>
+
+                  <label>
+                    <input type="radio" name="timeline" value="ASAP" />
+                    <span>ASAP</span>
+                  </label>
+
+                  <label>
+                    <input
+                      type="radio"
+                      name="timeline"
+                      value="Within the next few weeks"
+                    />
+                    <span>Within the next few weeks</span>
+                  </label>
+
+                  <label>
+                    <input
+                      type="radio"
+                      name="timeline"
+                      value="Within the next month"
+                    />
+                    <span>Within the next month</span>
+                  </label>
+
+                  <label>
+                    <input type="radio" name="timeline" value="Just exploring" />
+                    <span>Just exploring</span>
+                  </label>
+                </fieldset>
+              </div>
+
+              <button class="button button-primary contact-submit" type="submit">
+                Send it my way
+              </button>
+
+              <p class="contact-note">
+                You&rsquo;ll hear back from me directly &mdash; no agency handoff,
+                no tech jargon.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
