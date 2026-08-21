@@ -455,11 +455,13 @@ a {
 }
 
 .package-card-coral {
+    --package-accent: #f47f7b;
     color: #f47f7b;
     border-color: rgba(244, 127, 123, 0.5);
 }
 
 .package-card-blue {
+    --package-accent: #58aee8;
     color: #58aee8;
     border-color: rgba(88, 174, 232, 0.5);
 }
@@ -467,6 +469,7 @@ a {
 .package-badge {
     align-self: flex-start;
     border: 1.5px solid currentColor;
+    border-color: var(--package-accent);
     border-radius: 999px;
     padding: 4px 12px;
     color: var(--color-ink);
@@ -533,8 +536,9 @@ a {
     justify-content: center;
     min-height: 27px;
     border: 1.5px solid currentColor;
+    border-color: var(--package-accent);
     border-radius: 999px;
-    background: color-mix(in srgb, currentColor 8%, white);
+    background: color-mix(in srgb, var(--package-accent) 8%, white);
     color: var(--color-ink);
     font-size: 10px;
     font-weight: 500;
