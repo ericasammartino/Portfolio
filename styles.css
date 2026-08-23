@@ -1135,8 +1135,9 @@ a {
     }
 
     .contact-header {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        grid-template-columns: 30px 1fr;
+        align-items: start;
+        gap: 12px;
     }
 
     .contact-form {
