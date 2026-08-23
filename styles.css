@@ -67,8 +67,9 @@ a {
 
 .site-logo-image {
     display: block;
-    width: 140px;
-    height: 42px;
+    width: clamp(96px, 10vw, 120px);
+    height: auto;
+    max-height: 72px;
     object-fit: contain;
 }
 
@@ -871,8 +872,8 @@ a {
     }
 
     .site-logo-image {
-        width: 110px;
-        height: 34px;
+        width: 88px;
+        max-height: 54px;
     }
 
     .menu-toggle {
